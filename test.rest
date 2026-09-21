@@ -1,0 +1,38 @@
+# Switch between environment URLs by commenting/uncommenting:
+@baseUrl = http://localhost:3000
+#@baseUrl = https://cse3441-project1-ayg9.onrender.com
+
+### Test Get All Users
+GET {{baseUrl}}/users
+
+### Test Single User
+GET {{baseUrl}}/users/6aa1cdb61f1f1547c3f42f01
+
+
+### Create User
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "firstName": "Carlos",
+    "lastName": "Mendoza",
+    "email": "carlos.mendoza@test.com",
+    "favoriteColor": "Blue",
+    "birthday": "1998-05-14"
+}
+
+
+### Update User
+PUT {{baseUrl}}/users/6aa1cdb61f1f1547c3f42f01
+Content-Type: application/json
+
+{
+    "firstName": "Carlos",
+    "lastName": "Mendoza",
+    "email": "carlos.mendoza@test.com",
+    "favoriteColor": "Blue",
+    "birthday": "1998-05-14"
+}
+
+### Delete User
+DELETE {{baseUrl}}/users/6aa1cdb61f1f1547c3f42f01

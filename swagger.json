@@ -62,19 +62,16 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "username": {
                   "example": "any"
                 },
-                "birthday": {
+                "name": {
+                  "example": "any"
+                },
+                "ipaddress": {
                   "example": "any"
                 }
               }
@@ -132,19 +129,16 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "username": {
                   "example": "any"
                 },
-                "birthday": {
+                "name": {
+                  "example": "any"
+                },
+                "ipaddress": {
                   "example": "any"
                 }
               }

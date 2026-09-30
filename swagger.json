@@ -5,10 +5,11 @@
     "description": "Users Api",
     "version": "1.0.0"
   },
-  "host": "cse341-project1-ayg9.onrender.com",
+  "host": "",
   "basePath": "/",
   "schemes": [
-    "https"
+    "https",
+    "http"
   ],
   "paths": {
     "/": {
@@ -24,9 +25,21 @@
         }
       }
     },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/users/": {
       "get": {
-        "tags": [],
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -38,7 +51,9 @@
         }
       },
       "post": {
-        "tags": [],
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -78,7 +93,9 @@
     },
     "/users/{id}": {
       "get": {
-        "tags": [],
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -92,16 +109,15 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "200": {
+            "description": "OK"
           }
         }
       },
       "put": {
-        "tags": [],
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -109,6 +125,30 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "favoriteColor": {
+                  "example": "any"
+                },
+                "birthday": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
@@ -121,7 +161,9 @@
         }
       },
       "delete": {
-        "tags": [],
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -132,8 +174,11 @@
           }
         ],
         "responses": {
-          "default": {
-            "description": ""
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
